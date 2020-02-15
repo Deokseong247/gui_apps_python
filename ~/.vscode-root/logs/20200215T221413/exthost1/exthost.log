@@ -1,0 +1,22 @@
+[2020-02-15 22:14:17.654] [exthost] [info] extension host started
+[2020-02-15 22:14:17.714] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2020-02-15 22:14:17.725] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/25/usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2020-02-15 22:14:17.734] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2020-02-15 22:14:17.754] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/25/usr/share/code/resources/app/extensions/emmet/dist/extension
+[2020-02-15 22:14:17.842] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.git","_lower":"vscode.git"},"activationEvent":"*"}
+[2020-02-15 22:14:17.842] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/25/usr/share/code/resources/app/extensions/git/dist/main
+[2020-02-15 22:14:17.929] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2020-02-15 22:14:17.930] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/25/usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2020-02-15 22:14:17.936] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2020-02-15 22:14:17.936] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/25/usr/share/code/resources/app/extensions/search-result/dist/extension.js
+[2020-02-15 22:14:17.949] [exthost] [info] ExtensionService#_doActivateExtension vscode.vscode-account {"startup":true,"extensionId":{"value":"vscode.vscode-account","_lower":"vscode.vscode-account"},"activationEvent":"*"}
+[2020-02-15 22:14:17.950] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/25/usr/share/code/resources/app/extensions/vscode-account/dist/extension.js
+[2020-02-15 22:14:17.955] [exthost] [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer {"startup":true,"extensionId":{"value":"ritwickdey.LiveServer","_lower":"ritwickdey.liveserver"},"activationEvent":"*"}
+[2020-02-15 22:14:17.955] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/deokseong/.vscode/extensions/ritwickdey.liveserver-5.6.1/out/src/extension
+[2020-02-15 22:14:18.763] [exthost] [info] ExtensionService#_doActivateExtension vscodevim.vim {"startup":true,"extensionId":{"value":"vscodevim.vim","_lower":"vscodevim.vim"},"activationEvent":"*"}
+[2020-02-15 22:14:18.763] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/deokseong/.vscode/extensions/vscodevim.vim-1.12.4/out/extension
+[2020-02-15 22:14:19.614] [exthost] [info] eager extensions activated
+[2020-02-15 22:14:19.617] [exthost] [info] ExtensionService#_doActivateExtension vscode.python {"startup":false,"extensionId":{"value":"vscode.python","_lower":"vscode.python"},"activationEvent":"onLanguage:python"}
+[2020-02-15 22:14:19.617] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/25/usr/share/code/resources/app/extensions/python/dist/pythonMain
+[2020-02-15 22:14:19.619] [exthost] [info] ExtensionService#_doActivateExtension ms-python.python {"startup":false,"extensionId":{"value":"ms-python.python","_lower":"ms-python.python"},"activationEvent":"onLanguage:python"}
+[2020-02-15 22:14:19.619] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/deokseong/.vscode/extensions/ms-python.python-2020.2.63072/out/client/extension

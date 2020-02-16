@@ -1,3 +1,4 @@
+from os import environ
 from tkinter import *
 from tkinter import messagebox
 from db import Database
@@ -5,7 +6,6 @@ from db import Database
 db = Database('store.db')
 
 # DISPLAY setting
-from os import environ
 environ['DISPLAY'] = ':0.0'
 
 
@@ -14,39 +14,57 @@ def populate_list():
     for row in db.fetch():
         parts_list.insert(END, row)
 
+
 def add_item():
     if part_text.get() == '' or customer_text.get() == '' or retailer_text.get() == '' or price_text.get() == '':
         messagebox.showerror('Required Fields', 'Please include all fields')
         return
-    db.insert(part_text.get(), customer_text.get(), retailer_text.get(),price_text.get())
+    db.insert(part_text.get(), customer_text.get(),
+              retailer_text.get(), price_text.get())
     parts_list.delete(0, END)
-    parts_list.insert(END, (part_text.get(), customer_text.get(), retailer_text.get(), price_text.get()))
+    parts_list.insert(END, (part_text.get(), customer_text.get(),
+                            retailer_text.get(), price_text.get()))
+    clear_text()
     populate_list()
 
-def select_item(event):
-    global selected_item
-    index = parts_list.curselection()[0]
-    selected_item = parts_list.get(index)
 
-    part_entry.delete(0, END)
-    part_entry.insert(END, selected_item[1])
-    customer_entry.delete(0, END)
-    customer_entry.insert(END, selected_item[2])
-    retailer_entry.delete(0, END)
-    retailer_entry.insert(END, selected_item[3])
-    price_entry.delete(0, END)
-    price_entry.insert(END, selected_item[4])
+def select_item(event):
+    try:
+        global selected_item
+        index = parts_list.curselection()[0]
+        selected_item = parts_list.get(index)
+
+        part_entry.delete(0, END)
+        part_entry.insert(END, selected_item[1])
+        customer_entry.delete(0, END)
+        customer_entry.insert(END, selected_item[2])
+        retailer_entry.delete(0, END)
+        retailer_entry.insert(END, selected_item[3])
+        price_entry.delete(0, END)
+        price_entry.insert(END, selected_item[4])
+    except IndexError:
+        pass
 
 
 def remove_item():
     db.remove(selected_item[0])
+    clear_text()
     populate_list()
 
+
 def update_item():
-    print('Update')
+    db.update(selected_item[0], part_text.get(), customer_text.get(),
+              retailer_text.get(), price_text.get())
+    clear_text()
+    populate_list()
+
 
 def clear_text():
-    print('Clear')
+    part_entry.delete(0, END)
+    customer_entry.delete(0, END)
+    retailer_entry.delete(0, END)
+    price_entry.delete(0, END)
+
 
 # window object
 app = Tk()
@@ -82,7 +100,8 @@ price_entry.grid(row=1, column=3)
 # Parts List (Listbox)
 scrollbar = Scrollbar(app)
 scrollbar.grid(row=3, column=3)
-parts_list = Listbox(app, height=8, width=50, border=0, yscrollcommand=scrollbar.set)
+parts_list = Listbox(app, height=8, width=50, border=0,
+                     yscrollcommand=scrollbar.set)
 parts_list.grid(row=3, column=0, columnspan=3, rowspan=6, pady=20)
 
 # Scrollbar for parts list
@@ -113,9 +132,5 @@ app.geometry('700x400')
 populate_list()
 
 
-
-
-
 # Start program
 app.mainloop()
-
